@@ -1,0 +1,13 @@
+c:\users\student\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+c:\users\student\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+c:\users\student\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+c:\users\student\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+c:\users\student\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+c:\users\student\documents\visual studio 2015\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Student\Desktop\ss\C-_s\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Student\Desktop\ss\C-_s\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Student\Desktop\ss\C-_s\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Student\Desktop\ss\C-_s\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojAssemblyReference.cache
+C:\Users\Student\Desktop\ss\C-_s\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\ss\C-_s\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Student\Desktop\ss\C-_s\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
