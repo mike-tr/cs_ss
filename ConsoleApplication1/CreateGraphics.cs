@@ -14,6 +14,13 @@ namespace ConsoleApplication1
             var program = new StartProgram();
             var game = new Game();
             program.Start(game, true);
+
+            program.Refresh();
+            program.Refresh();
+            
+            program.Refresh();
+            program.Refresh();
+            //program.ReDraw();
             //program.ShowConsole(true);
         }
     }

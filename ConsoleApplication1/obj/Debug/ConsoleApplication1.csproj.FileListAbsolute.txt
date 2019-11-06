@@ -11,3 +11,10 @@ C:\Users\Student\Desktop\ss\C-_s\ConsoleApplication1\obj\Debug\ConsoleApplicatio
 C:\Users\Student\Desktop\ss\C-_s\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
 C:\Users\Student\Desktop\ss\C-_s\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Users\Student\Desktop\ss\C-_s\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Student\source\repos\wtf\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Student\source\repos\wtf\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Student\source\repos\wtf\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Student\source\repos\wtf\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojAssemblyReference.cache
+C:\Users\Student\source\repos\wtf\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\wtf\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Student\source\repos\wtf\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

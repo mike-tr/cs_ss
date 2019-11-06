@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Drawing;
 using System.Runtime.InteropServices;
+using System.Threading;
 using System.Collections.Generic;
 
 namespace ConsoleApplication1
@@ -16,12 +17,16 @@ namespace ConsoleApplication1
 
         Graphics graphics;
         IDrawable drawable;
-        
+
+        Bitmap bm = new Bitmap(1000, 1000);
+        Graphics bmg;
+
 
         public void Start(IDrawable draw ,bool hideConsole = false)
         {
             drawable = draw;
             ShowConsole(!hideConsole);
+            DoubleBuffered = true;
             Application.Run(this);
         }
 
@@ -34,22 +39,20 @@ namespace ConsoleApplication1
 
         public StartProgram()
         {
-            this.Paint += new PaintEventHandler(draw);
-            this.Paint += new PaintEventHandler(draw);
+            this.Paint += new PaintEventHandler(Draw);
+            //this.Paint += new PaintEventHandler(Draw);
+            this.Invalidate();
+            
         }
 
         int x = 0;
-        private void draw(object sender, PaintEventArgs e)
+        private void Draw(object sender, PaintEventArgs e)
         {
+            this.Invalidate();
             graphics = e.Graphics;
             drawable.Draw(graphics);
-            //graphics.Clear(Color.Black);
-            //graphics.DrawString("Hello C#", new Font("Verdana", 20), new SolidBrush(Color.Tomato), x, 40);
-            //graphics.DrawRectangle(new Pen(Color.Pink, 3), x, 20, 150, 100);
-            //graphics.DrawRectangle(new Pen(Color.Red, 50), 26, 26, 50, 50);
-
-            //CreateFilledRect(Color.White, 0, 30, 30, 30);
-            //x += 20;
+            Thread.Sleep(10);
+            
         }
 
         private void CreateFilledRect(Color color, int x, int y, int width, int height)
