@@ -8,18 +8,19 @@ namespace ConsoleApplication1
 {
     class CreateGraphics
     {
+        public static StartProgram instance; 
         public static void Main()
         {
             Console.WriteLine("??2");
-            var program = new StartProgram();
+            instance = new StartProgram();
             var game = new Game();
-            program.Start(game, true);
+            instance.Start(game, true);
 
-            program.Refresh();
-            program.Refresh();
+            instance.Refresh();
+            instance.Refresh();
             
-            program.Refresh();
-            program.Refresh();
+            instance.Refresh();
+            instance.Refresh();
             //program.ReDraw();
             //program.ShowConsole(true);
         }
