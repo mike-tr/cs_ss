@@ -16,7 +16,7 @@ namespace ConsoleApplication1
             Console.WriteLine("??2");
             instance = new StartProgram();
             var game = new Game();
-            instance.Start(game, true);
+            instance.Start(game, game, true);
 
             instance.Refresh();
             instance.Refresh();

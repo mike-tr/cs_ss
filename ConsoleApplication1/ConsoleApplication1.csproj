@@ -50,6 +50,7 @@
     <Compile Include="Game.cs" />
     <Compile Include="Grid.cs" />
     <Compile Include="IDrawable.cs" />
+    <Compile Include="IKeyboard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartProgram.cs">
       <SubType>Form</SubType>

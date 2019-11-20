@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace ConsoleApplication1
 {
-    class Game : IDrawable
+    class Game : IDrawable, IKeyboard
     {
         private Graphics graphics;
 
@@ -72,6 +73,21 @@ namespace ConsoleApplication1
             x = (width + 1) / 2 + x;
             y = (width + 1) / 2 + y;
             graphics.DrawRectangle(new Pen(color, width), x, y, width, height);
+        }
+
+        public void OnKeyDown(Keys key)
+        {
+            dir = -dir;
+        }
+
+        public void OnKeyUp(Keys key)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnKey(Keys key)
+        {
+            throw new NotImplementedException();
         }
     }
 }

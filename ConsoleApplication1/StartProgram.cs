@@ -17,14 +17,16 @@ namespace ConsoleApplication1
 
         Graphics graphics;
         IDrawable drawable;
+        IKeyboard keyboard;
 
         Bitmap bm = new Bitmap(1000, 1000);
         Graphics bmg;
 
 
-        public void Start(IDrawable draw ,bool hideConsole = false)
+        public void Start(IDrawable draw, IKeyboard keyboard, bool hideConsole = false)
         {
             drawable = draw;
+            this.keyboard = keyboard;
             ShowConsole(!hideConsole);
             DoubleBuffered = true;
             Application.Run(this);
@@ -40,7 +42,9 @@ namespace ConsoleApplication1
         public StartProgram()
         {
             this.Paint += new PaintEventHandler(Draw);
-            this.KeyDown += KeyDetect;
+            this.KeyDown += OnKeyDown;
+            this.KeyUp += OnKeyUp;
+
             //this.Paint += new PaintEventHandler(Draw);
             this.Invalidate();
             
@@ -55,13 +59,19 @@ namespace ConsoleApplication1
             Thread.Sleep(MainLoop.SleepTime);       
         }
 
-        void KeyDetect(object sender, KeyEventArgs e)
+        void OnKeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Escape)
-            {
-                Game.dir = -Game.dir;
-                //MessageBox.Show("Good, now move to that box over to your left");
-            }
+            keyboard.OnKeyDown(e.KeyCode);
+        }
+
+        void OnKeyUp(object sender, KeyEventArgs e)
+        {
+            keyboard.OnKeyUp(e.KeyCode);
+        }
+
+        void OnKeyB(object sender, KeyEventArgs e)
+        {
+            keyboard.OnKey(e.KeyCode);
         }
 
         private void CreateFilledRect(Color color, int x, int y, int width, int height)
