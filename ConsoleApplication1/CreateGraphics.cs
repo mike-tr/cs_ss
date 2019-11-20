@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class CreateGraphics
+    class MainLoop
     {
-        public static StartProgram instance; 
+        public static StartProgram instance;
+        public static int SleepTime = 100;
+
         public static void Main()
         {
             Console.WriteLine("??2");

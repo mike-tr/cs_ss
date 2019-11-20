@@ -40,6 +40,7 @@ namespace ConsoleApplication1
         public StartProgram()
         {
             this.Paint += new PaintEventHandler(Draw);
+            this.KeyDown += KeyDetect;
             //this.Paint += new PaintEventHandler(Draw);
             this.Invalidate();
             
@@ -51,8 +52,16 @@ namespace ConsoleApplication1
             this.Invalidate();
             graphics = e.Graphics;
             drawable.Draw(graphics);
-            Thread.Sleep(10);
-            
+            Thread.Sleep(MainLoop.SleepTime);       
+        }
+
+        void KeyDetect(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Game.dir = -Game.dir;
+                //MessageBox.Show("Good, now move to that box over to your left");
+            }
         }
 
         private void CreateFilledRect(Color color, int x, int y, int width, int height)

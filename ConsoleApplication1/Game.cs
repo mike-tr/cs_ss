@@ -16,46 +16,55 @@ namespace ConsoleApplication1
         int sizex = 20;
         int sizey = 20;
 
-        int[,] map;
+        Grid grid;
+
+        const int dtile = -1;
+
+        public static int dir = 1;
+
+        Tile head;
 
         public Game()
         {
-            map = new int[sizex, sizey];
-            for (int y = 0; y < sizey; y++)
-            {
-                for (int x = 0; x < sizex; x++)
-                {
-                    if(x == 0 || y == 0 || y == sizey - 1 || x == sizex - 1)
-                    {
-                        map[x, y] = 1;
-                    }
-                }
-            }
-            map[10, 10] = 1;
-            map[9, 9] = 1;
-            map[18, 18] = 1;
-            map[17, 17] = 1;
-            map[1, 1] = 1;
-            map[2, 2] = 1;
-            CreateGraphics.instance.Size = new Size((sizex + 1) * tileSize - 4, (sizey + 1) * tileSize + 19);
+            grid = new Grid(tileSize, tileSize, sizex, sizey);
+            grid.ForeachTileDo(CreateBorders);
+            //grid.Get(10, 10).value = dtile;
+
+            head = new Tile(10, 10, 1);
+            
+
+            MainLoop.instance.Size = new Size((sizex + 1) * tileSize - 4, (sizey + 1) * tileSize + 19);
         }
 
         public void Draw(Graphics graphics)
         {
             this.graphics = graphics;
             graphics.Clear(Color.Black);
-            //graphics.DrawRectangle(new Pen(Color.Red, 50), 26, 26, 50, 50);
-            CreateFilledRect(Color.Red, (sizex - 2) * tileSize, 1, tileSize, tileSize);
-            for (int y = 0; y < sizey; y++)
+            DrawTile(head);
+            grid.ForeachTileDo(DrawTile);
+
+            head.pos.x += dir;
+        }
+
+        int DrawTile(Tile tile)
+        {
+            if(tile.value == dtile)
             {
-                for (int x = 0; x < sizex; x++)
-                {
-                    if(map[x,y] == 1)
-                    {
-                        CreateFilledRect(Color.White, x * tileSize, y * tileSize, 9, 9);
-                    }
-                }
+                CreateFilledRect(Color.Red, tile.pos.x * tileSize, tile.pos.y * tileSize, 9, 9);
+            }else if(tile.value > 0)
+            {
+                CreateFilledRect(Color.White, tile.pos.x * tileSize, tile.pos.y * tileSize, 9, 9);
             }
+            return 0;
+        }
+
+        int CreateBorders(Tile tile)
+        {
+            if(tile.pos.x == 0 || tile.pos.y == 0 || tile.pos.x == grid.size.x - 1 || tile.pos.y == grid.size.y - 1)
+            {
+                tile.value = dtile;
+            }
+            return 0;
         }
 
         private void CreateFilledRect(Color color, int x, int y, int width, int height)

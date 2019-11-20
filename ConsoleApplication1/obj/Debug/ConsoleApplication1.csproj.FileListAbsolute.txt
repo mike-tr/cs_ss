@@ -25,3 +25,10 @@ C:\Users\Student\source\repos\m2\cs_ss\ConsoleApplication1\obj\Debug\ConsoleAppl
 C:\Users\Student\source\repos\m2\cs_ss\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
 C:\Users\Student\source\repos\m2\cs_ss\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Users\Student\source\repos\m2\cs_ss\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Student\source\repos\mm\cs_ss\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Student\source\repos\mm\cs_ss\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Student\source\repos\mm\cs_ss\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Student\source\repos\mm\cs_ss\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojAssemblyReference.cache
+C:\Users\Student\source\repos\mm\cs_ss\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\mm\cs_ss\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Student\source\repos\mm\cs_ss\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
