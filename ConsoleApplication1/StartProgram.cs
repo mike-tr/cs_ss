@@ -17,20 +17,17 @@ namespace ConsoleApplication1
 
         Graphics graphics;
         IDrawable drawable;
-        IKeyboard keyboard;
 
-        Bitmap bm = new Bitmap(1000, 1000);
-        Graphics bmg;
-
-
-        public void Start(IDrawable draw, IKeyboard keyboard, bool hideConsole = false)
+        public void Start(IDrawable draw, bool hideConsole = false)
         {
             drawable = draw;
-            this.keyboard = keyboard;
             ShowConsole(!hideConsole);
+
             DoubleBuffered = true;
-            Application.Run(this);
+            Application.Run(this);       
         }
+
+
 
         public void ShowConsole(bool show)
         {
@@ -44,34 +41,41 @@ namespace ConsoleApplication1
             this.Paint += new PaintEventHandler(Draw);
             this.KeyDown += OnKeyDown;
             this.KeyUp += OnKeyUp;
+            this.MouseDown += OnMouseDown;
+            this.MouseUp += OnMouseUp;
 
             //this.Paint += new PaintEventHandler(Draw);
             this.Invalidate();
             
         }
 
-        int x = 0;
+        private void OnMouseUp(object sender, MouseEventArgs e)
+        {
+            //throw new NotImplementedException();
+        }
+
+        private void OnMouseDown(object sender, MouseEventArgs e)
+        {
+            //throw new NotImplementedException();
+        }
+
         private void Draw(object sender, PaintEventArgs e)
         {
             this.Invalidate();
             graphics = e.Graphics;
             drawable.Draw(graphics);
+            Input.Update();
             Thread.Sleep(MainLoop.SleepTime);       
         }
 
         void OnKeyDown(object sender, KeyEventArgs e)
         {
-            keyboard.OnKeyDown(e.KeyCode);
+            Input.AddKey(e.KeyCode);
         }
 
         void OnKeyUp(object sender, KeyEventArgs e)
         {
-            keyboard.OnKeyUp(e.KeyCode);
-        }
-
-        void OnKeyB(object sender, KeyEventArgs e)
-        {
-            keyboard.OnKey(e.KeyCode);
+            Input.RemoveKey(e.KeyCode);
         }
 
         private void CreateFilledRect(Color color, int x, int y, int width, int height)

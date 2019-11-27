@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace ConsoleApplication1
 {
-    class Game : IDrawable, IKeyboard
+    class Game : IDrawable
     {
         private Graphics graphics;
 
@@ -39,6 +39,11 @@ namespace ConsoleApplication1
 
         public void Draw(Graphics graphics)
         {
+            if (Input.GetKeyDown(Keys.Space))
+            {
+                dir *= -1;
+            }
+
             this.graphics = graphics;
             graphics.Clear(Color.Black);
             DrawTile(head);
@@ -73,21 +78,6 @@ namespace ConsoleApplication1
             x = (width + 1) / 2 + x;
             y = (width + 1) / 2 + y;
             graphics.DrawRectangle(new Pen(color, width), x, y, width, height);
-        }
-
-        public void OnKeyDown(Keys key)
-        {
-            dir = -dir;
-        }
-
-        public void OnKeyUp(Keys key)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void OnKey(Keys key)
-        {
-            throw new NotImplementedException();
         }
     }
 }

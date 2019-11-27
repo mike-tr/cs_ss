@@ -9,20 +9,16 @@ namespace ConsoleApplication1
     class MainLoop
     {
         public static StartProgram instance;
-        public static int SleepTime = 100;
+        public static int SleepTime = 10;
 
         public static void Main()
         {
             Console.WriteLine("??2");
             instance = new StartProgram();
             var game = new Game();
-            instance.Start(game, game, true);
+            instance.Start(game);
 
-            instance.Refresh();
-            instance.Refresh();
-            
-            instance.Refresh();
-            instance.Refresh();
+            //instance.Refresh();
             //program.ReDraw();
             //program.ShowConsole(true);
         }
