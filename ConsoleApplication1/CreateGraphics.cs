@@ -9,7 +9,7 @@ namespace ConsoleApplication1
     class MainLoop
     {
         public static StartProgram instance;
-        public static int SleepTime = 10;
+        public static int SleepTime = 50;
 
         public static void Main()
         {

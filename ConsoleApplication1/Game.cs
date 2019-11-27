@@ -43,6 +43,14 @@ namespace ConsoleApplication1
             {
                 dir *= -1;
             }
+            if (Input.GetButtonDown(MouseButtons.Left))
+            {
+                dir = 0;
+            }
+            if (Input.GetButtonUp(MouseButtons.Left))
+            {
+                dir = 1;
+            }
 
             this.graphics = graphics;
             graphics.Clear(Color.Black);

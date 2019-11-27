@@ -27,8 +27,6 @@ namespace ConsoleApplication1
             Application.Run(this);       
         }
 
-
-
         public void ShowConsole(bool show)
         {
             var console = GetConsoleWindow();
@@ -51,11 +49,13 @@ namespace ConsoleApplication1
 
         private void OnMouseUp(object sender, MouseEventArgs e)
         {
+            Input.RemoveButton(e.Button);
             //throw new NotImplementedException();
         }
 
         private void OnMouseDown(object sender, MouseEventArgs e)
         {
+            Input.AddButton(e.Button);
             //throw new NotImplementedException();
         }
 
